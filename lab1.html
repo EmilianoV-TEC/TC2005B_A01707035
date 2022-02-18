@@ -1,26 +1,27 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" href="estiloMin.css">
     <title>Laboratorio 1</title>
   </head>
-  <body style="background-color:Ivory">
-    <header style="text-align:right; background-color:Azure">
+  <body>
+    <header>
       <p>
         Por Emiliano Vásquez Olea A01707035 <br>
           a01707035@tec.mx
       </p>
    	</header>
-    <h1 style="text-align:center">Laboratorio 1</h1>
+    <h1 id="tituloLab">Laboratorio 1</h1>
 
-    <p style="text-align:center"> Soy Emiliano y me gusta programar y los videojuegos. He podido participar en proyectos de inteligencia artificial y robótica, y me interesa mucho la programación competitiva </p>
+    <p id="inicio"> Soy Emiliano y me gusta programar y los videojuegos. He podido participar en proyectos de inteligencia artificial y robótica, y me interesa mucho la programación competitiva </p>
 
-    <section>
-      <div style="width:49%; float:left;">
+    <section class="contenido">
+      <div id="barraIzq">
       	<h2> Inteligencia Artificial </h2>
       	<p> Creo que la <strong>inteligencia atificial</strong> es una de las áreas de la computación más impactantes de la actualidad, permite generar soluciones eficientes a muchos problemas y brinda beneficios a muchas áreas de la ciencia e ingeniería. Tuve la oportunidad de colaborar en un proyecto de IA centrado en la visión por computadora </p>
         <img src="https://cdn2.hubspot.net/hub/5300505/hubfs/Imported_Blog_Media/bismart-artificial-intelligence-1.jpg?width=900&name=bismart-artificial-intelligence-1.jpg" width="99%">
       </div>
-      <div style="width:49%; float:right">
+      <div id="barraDer">
         <h2> Programación Competitiva </h2>
       	<p> La <strong>programación competitiva </strong> creo que es una forma muy buena para aprender algoritmos y estructuras de datos en un lenguaje de programación, además de que permite practicar la resolución de problemas con la programación y técnicas para generar código eficiente. Tuve la oportunidad en una competencia de programación enfocada en este ámbito durante la preparatoria </p>
         <img src="https://www.codespaces.com/wp-content/uploads/2019/09/CPlusPlus.jpg" width="100%">
@@ -42,8 +43,8 @@
 	  <input type="range" id="rango" name="rango" min="0" max="10" value="5"><br>
     </form>
 
-    <h2>Preguntas </h2>
-    <ul>
+    <h2>Preguntas lab 1</h2>
+    <ul class="preguntas">
       <li>¿Cuál es la diferencia entre Internet y la World Wide Web?</li>
       <p>El internet se refiere a una red de computadoras que existe alrededor del mundo, mientras que la World Wide Web indica la red de páginas que se encuentran en el internet </p>
       <li>¿Cuáles son las partes de un URL?</li>
@@ -74,8 +75,19 @@
       <p>Planificación, análisis, diseño, implementación, mantenimiento</p>
       <li>¿Cuál es el ciclo de desarrollo de sistemas de información?</li>
       <p>Planificación, análisis, diseño, implementación, pruebas, despliegue, mantenimiento</p>
-
 	</ul>
+
+  <h2>Preguntas lab 2</h2>
+  <ul class="preguntas">
+    <li>Como ingeniero de software ¿cuál es tu recomendación sobre el uso de !important en un CSS? </li>
+    <p>Debe de ser usado cuando es necesario sobreescribir otros atributos con el objetivo de mantener alguno, como cuando se sabe de un aspecto importante para e diseño, y no se quiere que cambie a pesar del uso de otras clases o id</p>
+    <li>Si se pone una imagen de fondo en una página HTML, ¿por qué debe escogerse con cuidado?</li>
+    <p>Por las dimensiones, ya que si no concuerda con las del sitio o dispositivo es posible que no se vea como se espera. También se deben cuidar las rutas</p>
+    <li>Como ingeniero de software, ¿cuál es tu recomendación al elegir las unidades de un propiedad de estilo entre %, px y pt?</li>
+    <p>Creo que px y % sirven bien para las páginas, el porcentaje permite mantener imágenes o figuras de con un tamaño adecuado con respecto a las dimensiones, y px puede ayudar a mantener la misma visibilidad</p>
+    <li>¿Por qué el uso de una versión minimizada del CSS mejora el rendimiento del sitio?</li>
+    <p>Debido a que incluye una menor cantidad de caracteres, haciendo que leerlo sea más rápido</p>
+  </ul>
   <h2>Referencias</h2>
     <ul>
       <li>Copes F.(2019) The HTML Handbook. https://www.freecodecamp.org/news/http-and-everything-you-need-to-know-about-it/ </li>
@@ -84,7 +96,7 @@
       <li>Berzal F. (2006) El ciclo de vida de un sistema de información. http://flanagan.ugr.es/docencia/2005-2006/2/apuntes/ciclovida.pdf     </li> 
     </ul>
     <footer>
-      <p style="text-align:center;">
+      <p>
       	Editor: Atom  <a href="https://atom.io/"> liga a sitio </a>
        </p>
     </footer>
