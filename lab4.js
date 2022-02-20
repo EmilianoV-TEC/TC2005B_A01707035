@@ -11,40 +11,6 @@ function intRand()
     return val;
 }
 
-function ejercicio1()
-{
-    const num = prompt("Ingresa un número");
-    let res = "<table>"
-    res += "<th> Número </th> <th> Cuadrado </th> <th> Cubo </th>";
-    for(let i = 1; i <= num; i++)
-    {
-        res += "<tr>";
-        res += "<td>" + i + "</td>";
-        res += "<td>" + i*i + "</td>";
-        res += "<td>" + i*i*i + "</td>";
-        res += "</tr>";
-    }
-    res += "</table>";
-    document.write(res);
-}
-
-function ejercicio2()
-{
-    let res = "<p>";
-    const suma = intRand() + intRand();
-    const startTime = new Date();
-    const numAd = prompt("Intenta adivinar la suma de dos números aleatorios entre 1 y 100");
-    const endTime = new Date();
-    const tiempo = (endTime - startTime)/1000;
-    if(numAd == suma)
-        res += "Si adivinaste el número, ";
-    else
-        res += "No adivinaste el número, ";
-    
-    res += "  Tardaste " + tiempo + " Segundos en responder </p>";
-    document.write(res);
-}
-
 function ejercicio3(...arr)
 {
     let res = "<p> Arreglo: " + arr + "</p> <ul>";
@@ -143,24 +109,50 @@ function ejercicio6(...arr)
     return true;
 }
 
-let arrEjemplo = [5, -2, 0, 0, 3, 0, -12, -2];
+let arrEjemplo = [5, -2, 0, 0, 3, 0, -12, -2], arrEjemplo2 = [6, 3, 0, 2, -1, -9, -2, 1];
 let matrizEjemplo = [[9,1,3,7,6,4], [2,2,-4,9,2,4,5], [7,2,0,0,1,2,5]];
 let ticketEjemplo = ["Carlos", "Mueblería", "Juan", "Compras"];
 
 hEjercicio(1);
-ejercicio1();
+const num = prompt("Ingresa un número");
+let res = "<table>"
+res += "<th> Número </th> <th> Cuadrado </th> <th> Cubo </th>";
+for(let i = 1; i <= num; i++)
+{
+    res += "<tr>";
+    res += "<td>" + i + "</td>";
+    res += "<td>" + i*i + "</td>";
+    res += "<td>" + i*i*i + "</td>";
+    res += "</tr>";
+}
+res += "</table>";
+document.write(res);
 
 hEjercicio(2);
-ejercicio2();
+let resEj2 = "<p>";
+const suma = intRand() + intRand();
+const startTime = new Date();
+const numAd = prompt("Intenta adivinar la suma de dos números aleatorios entre 1 y 100");
+const endTime = new Date();
+const tiempo = (endTime - startTime)/1000;
+if(numAd == suma)
+    resEj2 += "Si adivinaste el número, ";
+else
+    resEj2 += "No adivinaste el número, ";
+
+resEj2 += "  Tardaste " + tiempo + " Segundos en responder </p>";
+document.write(resEj2);
 
 hEjercicio(3);
 console.assert(ejercicio3(...arrEjemplo));
+console.assert(ejercicio3(...arrEjemplo2));
 
 hEjercicio(4);
 console.assert(ejercicio4(...matrizEjemplo));
 
 hEjercicio(5);
 console.assert(ejercicio5(5648322));
+console.assert(ejercicio5(28310985));
 
 hEjercicio(6);
 console.assert(ejercicio6(...ticketEjemplo));
