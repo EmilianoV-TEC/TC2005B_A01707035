@@ -64,6 +64,6 @@ const server = http.createServer((request, response) => {
     response.write(pagina);
     response.end();
 
-})
+});
 
 server.listen(3000);
