@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset=UTF-8″ />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+      <link rel="stylesheet" href="../estilo.css">
+    <title>Laboratorio 6</title>
+  </head>
+  <body>
+      <div class="container">
+        <div class="row titulo justify-content-center align-items-center" id="tituloLab">
+            <div class="col-12"><div class="p-2 bg-light"><h1 class="text-center">Laboratorio 6</h1></div></div>
+          </div>
+  
+          <div class="row justify-content-center">
+            <div class="col-8 contenido p-3 mt-3 mb-2 bg-secondary text-white"><p class="text-center">Página simple que permite validar la seguridad de una contrasena y vender ciertos productos.</p></div>
+          </div>
+
+        <div class="row justify-content-center">
+          <form id="form_cont" >
+            <div class="form-group">
+              <label for="passwordUsuario">Ingresa tu contraseña (Debe contener por lo menos una letra en mayúscula, una en minúscula, un número y 5 caracteres)</label>
+              <input type="password" class="form-control" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{5,}" id="passwordUsuario" placeholder="Contraseña">
+              <small id="passCorrecto"></small>
+            </div>
+            
+            <div class="form-group">
+              <label for="passConfirmar">Confirma tu contraseña:</label>
+              <input type="password" class="form-control" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{5,}" id="passConfirmar" placeholder="Confirma">
+            </div>
+
+            <button type="submit" class="btn btn-primary mt-3" id="enviar">Submit</button>
+          </form>
+        </div>
+
+        <div class="row justify-content-center mt-5">
+          <div class="col-4 p-2 text-center">
+            <div class="bg-light">
+              <h2 class="text-center">Queso Cheddar Suave, 75$</h2>
+              <img src="https://res.cloudinary.com/walmart-labs/image/upload/w_960,dpr_auto,f_auto,q_auto:best/gr/images/product-images/img_large/00005283312000L.jpg" width="100%" alt="Queso Cheddar">
+              <button type="button" class="btn btn-primary mt-3 mb-2" id="comprar_queso">Agregar al carrito</button>
+            </div>
+          </div>
+          <div class="col-4 p-2 text-center">
+            <div class="bg-light">
+              <h2 class="text-center">Yoghurt Lala con fresa, 30$</h2>
+              <img src="https://res.cloudinary.com/walmart-labs/image/upload/w_960,dpr_auto,f_auto,q_auto:best/gr/images/product-images/img_large/00750102051047L.jpg" width="100%" alt="Yogur lala">
+              <button type="button" class="btn btn-primary mt-3 mb-2" id="comprar_yogur">Agregar al carrito</button>
+            </div>
+          </div>
+          <div class="col-4 p-2 text-center">
+            <div class="bg-light">
+              <h2 class="text-center">Galón leche Lala, 70$</h2>
+              <img src="https://assets.sams.com.mx/image/upload/f_auto,q_auto:eco,w_350,c_scale,dpr_auto/mx/images/product-images/img_medium/980019514m.jpg" width="100%" alt="Galón de leche">
+              <button type="button" class="btn btn-primary mt-3 mb-2" id="comprar_leche">Agregar al carrito</button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="row justify-content-center text-center">
+          <div class="col-8 contenido p-3 mt-3 mb-2 bg-info text-white">
+            <h2> Carrito </h2>
+            <p class="text-center" id="costoTotal">Precio de productos: 0$</p>
+            <p class="text-center" id="IVAPrecio">IVA: 0$</p>
+            <button type="button" class="btn btn-primary mt-3 mb-2" id="comprar_todo">Comprar</button>
+          </div>
+        </div>
+
+      </div>
+
+      <h2>Preguntas lab 2</h2>
+      <ul class="preguntas">
+        <li>¿Por qué es una buena práctica usar JavaScript para checar que sean válidos los inputs de las formas antes de enviar los datos al servidor? </li>
+        <p>Para que se obtenga la información necesaria y en un formato adecuado para que sea almacenado, así como en ocasiones asegurar cierto nivel de seguridad</p>
+        <li>¿Cómo puedes saltarte la seguridad de validaciones hechas con JavaScript?</li>
+        <p>Deshabilitando Javascript en el navegador o editando aspectos del html</p>
+        <li>Si te puedes saltar la seguridad de las validaciones de JavaScript, entonces ¿por qué la primera pregunta dice que es una buena práctica?</li>
+        <p>Debido a que sigue siendo una guía o requerimiento para mejorar la seguridad y dar formato a los datos almacenados</p>
+      </ul>
+  <h2>Fuentes adicionales:</h2>
+    <ul>
+      <li>https://www.w3schools.com/tags/att_input_pattern.asp</li>
+      <li>https://www.w3schools.com/jsref/prop_style_fontstyle.asp</li>
+      <li>https://itnext.io/https-medium-com-joshstudley-form-field-validation-with-html-and-a-little-javascript-1bda6a4a4c8c#:~:text=Using%20the%20email%20type%2C%20we,any%20pattern%3D%22%22%20tag%20.</li>
+    </ul>
+
+      
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+      <script src="lab6Script.js"></script>
+  </body>
+</html>
