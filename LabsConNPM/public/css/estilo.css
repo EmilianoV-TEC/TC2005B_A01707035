@@ -1,0 +1,64 @@
+
+body
+{
+    margin:0 auto;
+    max-width: 50em;
+    background-color:Ivory
+}
+
+header
+{
+    text-align: right;
+    background-color: burlywood;
+}
+
+footer
+{
+    text-align: center;
+}
+
+header:hover
+{
+    background-color: blanchedalmond;
+}
+
+h1:hover 
+{
+    color:aqua;
+}
+
+.contenido
+{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.contenido div
+{
+    width: 49%;
+}
+
+.preguntas li
+{
+    font-size: large;
+    color: darkcyan;
+}
+#tituloLab
+{
+    text-align: center;
+}
+
+#inicio
+{
+    text-align: center;
+    font-size: medium;
+}
+
+#barraIzq
+{
+    float: left;
+}
+
+#barraDer
+{
+    float: right;
+}

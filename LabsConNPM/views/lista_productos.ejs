@@ -1,0 +1,31 @@
+<%- include('includes/head.ejs') %>
+      <div class="container">
+        <div class="row titulo justify-content-center align-items-center" id="tituloLab">
+            <div class="col-12"><div class="p-2 bg-light"><h1 class="text-center">Laboratorio 10</h1></div></div>
+          </div>
+  
+          <div class="row justify-content-center">
+            <div class="col-8 contenido p-3 mt-3 mb-2 bg-secondary text-white"><p class="text-center">Página simple con lista de productos nuevos ingresados</p></div>
+          </div>
+
+          <div class="row justify-content-center mt-5">
+          <% if (productos.length > 0) { %>
+            <% for(let producto of productos) {%>
+              <div class="col-4 p-2 text-center">
+                <div class="bg-light">
+                 <h2 class="text-center"><%= producto.nombre %></h2>
+                 <p class="text-center">Precio: <%= producto.precio %>$</p>
+
+                 </div>
+              </div>
+            <% } %>
+          <% } else {%>
+            <h2>No hay productos registrados</h2>
+          <% } %>
+          </div>
+
+
+      </div>
+
+<%- include('includes/footer.ejs') %>
+        
