@@ -1,9 +1,9 @@
 {
   "name": "lab11",
   "version": "1.0.0",
-  "main": "lab12Script.js",
+  "main": "labScript.js",
   "scripts": {
-    "start": "nodemon lab12Script.js",
+    "start": "nodemon labScript.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Emiliano V",

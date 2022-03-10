@@ -3,27 +3,16 @@ const path = require('path');
 const express = require('express');
 const app = express();
 
+const controlador_productos = require('../controllers/controlador_productos');
+
 const router = express.Router();
 
-const productosA = [
-    {nombre: "queso", precio: 75}, 
-    {nombre: "yogur", precio: 30}, 
-    {nombre: "leche", precio: 70}
-];
 
-
-router.use('/info', (request, response, next) => {
-    response.render('lista_productos', {productos: productosA});
-});
+router.use('/info', controlador_productos.info);
     
-router.get('/nuevo', (request, response, next) => {
-    response.render('nuevo_producto');
-});
+router.get('/nuevo', controlador_productos.nuevo_get);
 
-router.post('/nuevo', (request, response, next) => {
-    productosA.push({nombre: request.body.nombre, precio: request.body.precio});
-    response.redirect('/productos/info');
-});
+router.post('/nuevo', controlador_productos.nuevo_post);
 
 
 module.exports = router;
