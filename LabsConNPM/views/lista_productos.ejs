@@ -7,6 +7,16 @@
           <div class="row justify-content-center">
             <div class="col-8 contenido p-3 mt-3 mb-2 bg-secondary text-white"><p class="text-center">Página simple con lista de productos nuevos ingresados</p></div>
           </div>
+          
+          <% if (ultimo_producto != '') {%>
+          <div class="row justify-content-center">
+            <div class="col-6 contenido p-2 mt-2 mb-1 bg-info text-white">
+              <p class="text-center">
+                El último producto agregado fue: <%= ultimo_producto %>
+              </p>
+            </div>
+          </div>
+          <% } %>
 
           <div class="row justify-content-center mt-5">
           <% if (productos.length > 0) { %>

@@ -1,0 +1,27 @@
+<%- include('includes/head.ejs') %>
+
+      <div class="container">
+        <div class="row titulo justify-content-center align-items-center" id="tituloLab">
+            <div class="col-12"><div class="p-2 bg-light"><h1 class="text-center">Login</h1></div></div>
+          </div>
+  
+
+        <div class="row justify-content-center">
+          <form id="form_login" method="POST">
+            <div class="form-group">
+                <label for="username">Ingresa tu nombre de usuario:</label>
+                <input type="text" class="form-control" id="username" name="username" placeholder="Juan444">
+              </div>
+
+            <div class="form-group">
+              <label for="password">Ingresa tu contraseña (Debe contener por lo menos una letra en mayúscula, una en minúscula, un número y 5 caracteres)</label>
+              <input type="password" class="form-control" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{5,}" id="password" name="password" placeholder="Contraseña">
+            </div>
+
+            <button type="submit" class="btn btn-primary mt-3" id="enviar">Submit</button>
+          </form>
+        </div>
+
+      </div>
+
+<%- include('includes/footer.ejs') %>
