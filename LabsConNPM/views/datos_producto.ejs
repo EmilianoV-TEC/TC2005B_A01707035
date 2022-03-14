@@ -1,0 +1,29 @@
+<%- include('includes/head.ejs') %>
+      <div class="container">
+        <div class="row titulo justify-content-center align-items-center" id="tituloLab">
+            <div class="col-12"><div class="p-2 bg-light"><h1 class="text-center">Datos de producto</h1></div></div>
+          </div>
+  
+          <div class="row justify-content-center">
+            <div class="col-8 contenido p-3 mt-3 mb-2 bg-secondary text-white"><p class="text-center">Información del producto <%= producto[0].nombre%></p></div>
+          </div>
+
+        <div class="row justify-content-center">
+          <form id="form_productos" method="POST">
+            <div class="form-group">
+                <label for="nombre">Nombre: </label> 
+                <input type="text" id="nombre" name="nombre" placeholder="Jugo" value="<%= producto[0].nombre%>">
+            </div>
+
+            <div class="form-group">
+                <label for="precio">Precio: </label> 
+                <input type="number" id="precio" name="precio" placeholder="40" value="<%= producto[0].precio%>">
+            </div>
+
+            <button type="submit" class="btn btn-primary mt-3" id="enviar">Submit</button>
+          </form>
+
+          <a href="/productos/info">Regresar a la página principal</a>
+        </div>
+
+<%- include('includes/footer.ejs') %>

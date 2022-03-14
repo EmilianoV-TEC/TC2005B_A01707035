@@ -14,5 +14,9 @@ router.get('/nuevo', controlador_productos.nuevo_get);
 
 router.post('/nuevo', controlador_productos.nuevo_post);
 
+router.get('/datos/:id_producto', controlador_productos.datosProducto);
+
+router.post('/datos/:id_producto', controlador_productos.actualizaProducto);
+
 
 module.exports = router;

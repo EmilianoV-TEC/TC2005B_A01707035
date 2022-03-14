@@ -1,3 +1,4 @@
+const db = require('../util/database');
 
 const productosA = [
     {nombre: "queso", precio: 75}, 
@@ -15,12 +16,26 @@ module.exports = class Producto{
 
     //Este método servirá para guardar de manera persistente el nuevo objeto. 
     save() {
-        productosA.push(this);
+        return db.execute('INSERT INTO producto (nombre, precio) VALUES (?, ?)',
+        [this.nombre, this.precio]
+        );
     }
 
     //Este método servirá para devolver los objetos del almacenamiento persistente.
     static fetchAll() {
-        return productosA;
+        return db.execute('SELECT * FROM producto');
+    }
+
+    static fetchOne(id_producto){
+        return db.execute('SELECT * FROM producto WHERE id_producto=?',
+        [id_producto]
+        );
+    }
+
+    static update(id_producto, nombre, precio){
+        return db.execute('UPDATE producto SET nombre=?, precio=? WHERE id_producto=?',
+        [nombre, precio, id_producto]
+        );
     }
 
 }
