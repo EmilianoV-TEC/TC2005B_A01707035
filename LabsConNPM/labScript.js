@@ -5,6 +5,12 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const session = require('express-session');
 
+const rutaProductos = require('./routes/rutaProductos');
+const rutaLab = require('./routes/rutaLab6');
+
+const csrf = require('csurf');
+const csrfProtection = csrf();
+
 const app = express();
 
 app.set('view engine', 'ejs');
@@ -17,12 +23,15 @@ app.use(session({
 }));
 
 app.use(express.static(path.join(__dirname, '/public')));
-
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(cookieParser());
 
-const rutaProductos = require('./routes/rutaProductos');
-const rutaLab = require('./routes/rutaLab6');
+app.use(csrfProtection); 
+
+app.use((request, response, next) => {
+    response.locals.csrfToken = request.csrfToken();
+    next();
+});
 
 app.use('/productos', rutaProductos);
 

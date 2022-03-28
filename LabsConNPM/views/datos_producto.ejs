@@ -10,6 +10,7 @@
 
         <div class="row justify-content-center">
           <form id="form_productos" method="POST">
+            <input type="hidden" name="_csrf" value="<%= csrfToken %>" >
             <div class="form-group">
                 <label for="nombre">Nombre: </label> 
                 <input type="text" id="nombre" name="nombre" placeholder="Jugo" value="<%= producto[0].nombre%>">
