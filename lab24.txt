@@ -1,0 +1,21 @@
+Laboratiorio 24: AJAX
+Emiliano Vásquez Olea - A01707035
+
+Liga a commit de repositorio de proyecto donde se utiliza AJAX: https://github.com/juanManuelGonzalezA00572003/Div-Dev/commit/de164eae8e68e6b9afc038180bae24dd7c461ea2
+
+Preguntas:
+
+¿Qué importancia tiene AJAX en el desarrollo de RIA's (Rich Internet Applications?
+Que permiten que la aplicación sea más responsiva y permite actualizar su información sin requerir el uso de muchas rutas. Además de que mejora la interacción que tiene el usuario
+
+¿Qué implicaciones de seguridad tiene AJAX? ¿Dónde se deben hacer las validaciones de seguridad, del lado del cliente o del lado del servidor?
+Que se tienen más interacciones con la base de datos y llamadas al servidor, es necesario que la validación sea del lado del servidor.
+
+¿Qué es JSON?
+Significa JavaScript Object Notation, que es un formato de intercambio de datos.
+
+Referencias:
+
+https://www.techtarget.com/whatis/definition/Rich-Internet-Application-RIA#:~:text=A%20rich%20Internet%20application%20(RIA,normally%20associated%20with%20deskop%20applications.
+
+https://www.oracle.com/mx/database/what-is-json/#:~:text=La%20notaci%C3%B3n%20de%20objetos%20JavaScript,y%20se%20procesa%20m%C3%A1s%20r%C3%A1pido.
