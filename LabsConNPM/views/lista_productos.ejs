@@ -26,6 +26,8 @@
                  <h2 class="text-center"><%= producto.nombre %></h2>
                  <p class="text-center">Precio: <%= producto.precio %>$</p>
                  <a class="text-center" href="/productos/datos/<%= producto.id_producto %>">Editar</a>
+                 <br>
+                 <img src="../<%= producto.imagen_producto %>" class="img-thumbnail">
                  </div>
               </div>
             <% } %>

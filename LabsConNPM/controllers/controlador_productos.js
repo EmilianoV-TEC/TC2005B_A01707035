@@ -17,7 +17,7 @@ exports.nuevo_get = (request, response, next) => {
 };
 
 exports.nuevo_post = (request, response, next) => {
-    const productoNuevo = new Producto(request.body.nombre, request.body.precio);
+    const productoNuevo = new Producto(request.body.nombre, request.body.precio, request.file.path);
     productoNuevo.save()
         .then(() => {
             response.setHeader('Set-Cookie', 'ultimo_producto='+productoNuevo.nombre+'; HttpOnly');

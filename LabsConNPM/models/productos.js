@@ -9,15 +9,16 @@ const productosA = [
 module.exports = class Producto{
 
     //Constructor de la clase. Sirve para crear un nuevo objeto, y en él se definen las propiedades del modelo
-    constructor(nombre, precio) {
+    constructor(nombre, precio, imagen) {
         this.nombre = nombre;
         this.precio = precio;
+        this.imagen = imagen;
     }
 
     //Este método servirá para guardar de manera persistente el nuevo objeto. 
     save() {
-        return db.execute('INSERT INTO producto (nombre, precio) VALUES (?, ?)',
-        [this.nombre, this.precio]
+        return db.execute('INSERT INTO producto (nombre, precio, imagen_producto) VALUES (?, ?, ?)',
+        [this.nombre, this.precio, this.imagen]
         );
     }
 

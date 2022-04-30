@@ -9,8 +9,8 @@
           </div>
 
         <div class="row justify-content-center">
-          <form id="form_productos" method="POST">
-            <input type="hidden" name="_csrf" value="<%= csrfToken %>" >
+          <form id="form_productos" method="POST" enctype="multipart/form-data">
+            <input type="hidden" name="_csrf" value="<%= csrfToken %>"></input>
             <div class="form-group">
                 <label for="nombre">Nombre: </label> 
                 <input type="text" id="nombre" name="nombre" placeholder="Jugo">
@@ -20,6 +20,9 @@
                 <label for="precio">Precio: </label> 
                 <input type="number" id="precio" name="precio" placeholder="40">
             </div>
+
+            <input type="file" id="imagen" name="imagen">
+            <br>
 
             <button type="submit" class="btn btn-primary mt-3" id="enviar">Submit</button>
           </form>
