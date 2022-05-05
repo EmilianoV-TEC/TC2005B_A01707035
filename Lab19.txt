@@ -1,0 +1,9 @@
+Liga a commit:
+https://github.com/juanManuelGonzalezA00572003/Div-Dev/commit/2a331530afd0c5072a84a6d9853d3d55fa5f87e9
+
+Preguntas:
+¿En qué consiste el control de acceso basado en roles?
+Consiste en incluir un sistema que asigne roles y permisos para los diferentes usuarios, donde se epecifica el acceso a ciertas funciones del sistema, limitandola a roles específicos.
+
+Investiguen y describan 2 sistemas, uno que aplique RBAC y uno que no. Realicen un análisis de las ventajas y desventajas de cada uno con respecto al control de acceso.
+Un sistema que utilizaría RBAC podría ser un portal de una escuela, donde se tienen diferentes permisos para estudiantes o profesores, lo que permite controlar el acceso que tiene cada usuario y dividir funcionalidades. Un sistema sin RBAC podría ser una aplicación simple para administrar tareas personales, donde o existe mucha interacción con otros usuarios, por lo que se pueden generar las funciones de forma mas sencilla, sin limitar accesos.
