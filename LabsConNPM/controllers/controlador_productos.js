@@ -1,13 +1,23 @@
 const path = require('path');
 const Producto = require('../models/productos');
+const got = require('got');
+const url = 'http://api.open-notify.org/iss-now.json';
 
 
 exports.info = (request, response, next) => {
     Producto.fetchAll()
         .then(([rows, fieldData]) => {
-            response.render('lista_productos', {productos: rows, 
-                ultimo_producto: request.cookies.ultimo_producto ? request.cookies.ultimo_producto : '',
-                username: request.session.username ? request.session.username : ''});
+            got(url, { json: true })
+                .then(iss => {
+                    response.render('lista_productos', {productos: rows, 
+                        ultimo_producto: request.cookies.ultimo_producto ? request.cookies.ultimo_producto : '',
+                        username: request.session.username ? request.session.username : '',
+                        latIss: iss.body.iss_position.latitude,
+                        lonIss: iss.body.iss_position.longitude});
+                })
+                .catch(error => {
+                    console.log(error.response.body);
+            });
         })
         .catch(err => console.log(err));
 };
